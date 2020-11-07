@@ -1,0 +1,323 @@
+/* Global */
+body {
+  background-color: #acacac;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  } 
+  .container{
+    width: 80%; 
+    margin: auto;
+    height: 0px;
+  }
+
+  .container2{
+    display: flex;
+    flex-direction: row;
+    width: 80%; 
+    margin: auto;
+    height: 0px;
+  } 
+/* fim GLOBAL */
+
+/* Header */
+  .header{
+    background-color: black;
+    height: 100px;
+    padding-top: 0px;
+  }
+  .title-header h2{
+    margin-left: 40px;
+    color:white;
+  } 
+  
+  .title-header span{
+    color: red;
+  }
+  /* fim HEADER */
+
+  /* NAV */
+.nav{
+    float: center;
+  }
+
+.nav ul{
+  margin: 0px;
+}
+.title-header{
+    float: left;
+  }
+
+  .nav a{
+    text-decoration: none;
+    color: aqua;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  .nav li{
+    display: inline-block;
+    padding: 10px;
+    padding: 30px 10px 10px 10px;
+  }
+  /* Fim NAV */
+
+  /* SHOWCASE */
+.showcase{ 
+  background-image: url(../imagem/inicio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: red;
+  text-align: center;
+  min-height: 407px;
+}
+
+.showcase h3{
+  margin: 0;  
+  font-size: 45px;
+  padding-top: 130px;
+}
+
+/* Fim SHOWCASE */
+
+/* Início Gestão de Pessoas */
+.gestao{
+  height: 1500px;
+}
+
+.gestao h2{
+  margin: 0;
+  text-align: center;
+  color: red;  
+  padding-top: 30px;
+}
+
+.gestao p {
+  margin: 10px;  
+  color: black;
+
+}
+
+.gestao h3{
+  margin: 0;
+  margin-left: 30px;
+  text-align: left;
+  color: black;  
+}
+
+/* Fim Gestão de Pessoas */
+
+/* Início da Cultura Organizacional */
+
+.cultura {
+  height: 620px;
+}
+
+.cultura h2{
+  margin: 0;
+  text-align: center;
+  color: red;  
+  padding-top: 30px;
+}
+
+.cultura p{
+  margin: 10px;  
+  color: black;
+}
+
+.cultura h3{
+  margin: 0;
+  margin-left: 30px;
+  text-align: left;
+  color: black;  
+}
+
+/* Fim da Cultura Organizacional */
+
+/* Início Ética */
+.etica{
+  min-height: 180px;
+}
+
+.etica h2{
+  margin: 0;
+  text-align: center;
+  color: red;  
+  padding-top: 30px;
+}
+
+.etica p{
+  margin: 10px;  
+  color: black;
+}
+
+/* Fim Ética */
+
+/* Início Moral */
+
+.moral{
+  min-height: 170px;
+}
+
+.moral h2{
+  margin: 0;
+  text-align: center;
+  color: red;  
+  padding-top: 30px;
+}
+
+.moral p{
+  margin: 10px;  
+  color: black;
+}
+
+/* Fim Moral */
+
+/* Início Empátia */
+
+.empatia{
+  min-height: 190px;
+}
+
+.empatia h2{
+  margin: 0;
+  text-align: center;
+  color: red;  
+  padding-top: 30px;
+}
+
+.empatia p{
+  margin: 10px;  
+  color: black;
+}
+
+/* Fim Empátia */
+
+/* Início Desenvolvimento Interpessoal */
+
+.desenvolvimento{
+  min-height: 500px;
+}
+
+.desenvolvimento h2{
+  margin: 0;
+  text-align: center;
+  color: red;  
+  padding-top: 30px;
+}
+
+.desenvolvimento p{
+  margin: 10px;  
+  color: black;
+}
+
+.desenvolvimento h3 {
+  margin: 0;
+  margin-left: 30px;
+  text-align: left;
+  color: black; 
+}
+
+/* Fim Desenvolvimento Interpessoal */
+
+/* Footer */
+            
+footer {
+ width: 100%;
+ height: 100px;
+ background-color: #444444;
+ color: black;
+ margin-bottom: 0px;
+ padding: 100px 00px 20px 0px;
+}
+          
+footer .container {
+ color: aqua;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+          
+.copryghtMessage {
+ text-align: center;
+}
+
+  /* FIM DO FOOTER */
+
+/* Login */
+
+.login {
+  margin-left: 120px;
+  width: 80%;
+  min-height: 300px;
+}
+
+.fundo{
+  margin-top: 50px;
+  width: 50%;
+  background: white;
+  height: 300px;
+}
+
+.fundo h2{
+  text-align: center;
+}
+
+.fundo {
+  text-align: center;
+}
+
+.fundo button{
+background: red;
+color: white;
+} 
+
+
+.fundo2{
+  background-image: url(../imagem/login.jpg);
+  background-size: cover;
+  min-height: 200px;
+  margin-top: 50px;
+  width: 50%;
+  height: 300px;
+}
+/* FIM do Login */
+ 
+
+/* Cadastro */
+
+.cadastro {
+  min-height: 407px;
+}
+
+.fundo3{
+  margin-top: 50px;
+  margin-left: 70px;
+  width: 50%;
+  background: white;
+  height: 300px;
+}
+
+.fundo3 h3{
+  text-align: center;
+  color: red;
+
+}
+
+.fundo3 button{
+  background: red;
+  color: white;
+  } 
+
+  .fundo4{
+    background-image: url(../imagem/cadastro.jpg);
+  background-size: cover;
+  min-height: 200px;
+  margin-top: 50px;
+  width: 50%;
+  height: 300px;
+  }
+/* Fim do  Cadastro */
+
+
+
+
