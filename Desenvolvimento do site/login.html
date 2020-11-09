@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,6 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li class="Pagina" ><a href="pagina_inicial.html">Início</a></li>
                     <span class="span2"><li><a href="login.html">Login</a></li></span>
                     <li><a href="cadastro.html">Cadastro</a></li>
                 </ul>
@@ -29,8 +28,8 @@
         <div class="container2">
          <div class="fundo">
             <h2>Login</h2>
-            <a>Email:</a> <input id="login" type="text" placeholder="ex: gdpessoas@gmail.com"><br><br>
-            <a>Senha:</a> <input id="senha" type="text" placeholder="ex: 12345678"><br><br>
+            <b>Email:</b> <input id="login" type="text" placeholder="ex: gdpessoas@gmail.com"><br><br>
+            <b>Senha:</b> <input id="senha" type="text" placeholder="ex: 12345678"><br><br>
             <button onclick="entrar()">Entrar</button>
         </div>
         <div class="fundo2">
@@ -39,3 +38,9 @@
     </div>
 </body> 
 </html>
+
+<script>
+    function entrar() {
+window.location.href= "pagina_inicial.html";        
+    }
+</script>

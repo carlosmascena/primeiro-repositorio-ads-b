@@ -7,7 +7,7 @@ body {
   } 
   .container{
     width: 80%; 
-    margin: auto;
+    margin: auto; 
     height: 0px;
   }
 
@@ -28,7 +28,6 @@ body {
   }
   .title-header h2{
     margin-left: 40px;
-    margin-right: 10px;
     color:white;
   } 
   
@@ -39,7 +38,8 @@ body {
 
   /* NAV */
 .nav{
-    float: center;
+  margin-right: 60px ;
+    float: right;
   }
 
 .nav ul{
@@ -61,7 +61,7 @@ body {
   }
   .nav li{
     display: inline-block;
-    padding: 35px 5px 5px 5px;
+    padding: 35px 15px 5px 5px;
   }
   /* Fim NAV */
 
@@ -266,11 +266,18 @@ footer .container {
   text-align: center;
 }
 
-.fundo {
-  text-align: center;
+.fundo b{
+ font-size: 18px;
+ margin-left: 20px;
+}
+
+.fundo input{
+  width: 210px;
 }
 
 .fundo button{
+margin-left: 150px;
+margin-top: 15px;
 background: black;
 color: white;
 } 
@@ -306,7 +313,7 @@ color: white;
   margin-left: 20px;
 }
 
-.fundo3 h3{
+.fundo3 h2{
   margin-bottom: 10px;
   text-align: center;
   color: red;
