@@ -18,6 +18,11 @@ body {
     margin: auto;
     height: 0px;
   } 
+  .contorno{
+    margin-top: 5px;
+    border: 3px solid rgba(0, 0,0, 0.5);
+    border-radius: 15px;
+  }
 
 /* fim GLOBAL */
 
@@ -108,6 +113,7 @@ body {
   text-align: left;
   color: black;  
 }
+
 
 /* Fim Gestão de Pessoas */
 
@@ -256,6 +262,7 @@ footer .container {
 }
 
 .fundo{
+  border-radius: 15px;
   margin-top: 50px;
   width: 50%;
   background: white;
@@ -284,6 +291,7 @@ color: white;
 
 
 .fundo2{
+  border-radius: 15px;
   background-image: url(../imagem/login.jpg);
   background-size: cover;
   min-height: 200px;
@@ -302,6 +310,7 @@ color: white;
 }
 
 .fundo3{
+  border-radius: 15px;
   margin-top: 50px;
   margin-left: 70px;
   width: 50%;
@@ -329,6 +338,7 @@ color: white;
   } 
 
   .fundo4{
+  border-radius: 15px;
   background-image: url(../imagem/cadastro.jpg);
   background-size: cover;
   min-height: 200px;
