@@ -1,6 +1,6 @@
 /* Global */
 body {
-  background-color: #d8d8d8;
+  background-color: #f6f3f3;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -18,6 +18,7 @@ body {
     margin: auto;
     height: 0px;
   } 
+
 /* fim GLOBAL */
 
 /* Header */
@@ -38,7 +39,7 @@ body {
 
   /* NAV */
 .nav{
-  margin-right: 60px ;
+  margin-right: 50px ;
     float: right;
   }
 
@@ -61,7 +62,7 @@ body {
   }
   .nav li{
     display: inline-block;
-    padding: 35px 15px 5px 5px;
+    padding: 35px 5px 5px 5px;
   }
   /* Fim NAV */
 
@@ -91,7 +92,7 @@ body {
 .gestao h2{
   margin: 0;
   text-align: center;
-  color: #e6373e;  
+  color: #504e68;  
   padding-top: 30px;
 }
 
@@ -119,7 +120,7 @@ body {
 .cultura h2{
   margin: 0;
   text-align: center;
-  color: #e6373e;  
+  color: #504e68;  
   padding-top: 30px;
 }
 
@@ -145,7 +146,7 @@ body {
 .etica h2{
   margin: 0;
   text-align: center;
-  color: #e6373e;  
+  color: #504e68;  
   padding-top: 30px;
 }
 
@@ -165,7 +166,7 @@ body {
 .moral h2{
   margin: 0;
   text-align: center;
-  color: #e6373e;  
+  color: #504e68;  
   padding-top: 30px;
 }
 
@@ -185,7 +186,7 @@ body {
 .empatia h2{
   margin: 0;
   text-align: center;
-  color: #e6373e;  
+  color: #504e68;  
   padding-top: 30px;
 }
 
@@ -205,7 +206,7 @@ body {
 .desenvolvimento h2{
   margin: 0;
   text-align: center;
-  color:#e6373e;  
+  color:#504e68;  
   padding-top: 30px;
 }
 
@@ -228,14 +229,14 @@ body {
 footer {
  width: 100%;
  height: 100px;
- background-color: #444444;
+ background-color: #daf0fd;
  color: black;
  margin-bottom: 0px;
  padding: 100px 00px 20px 0px;
 }
           
 footer .container {
- color: white;
+ color: black;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -250,9 +251,8 @@ footer .container {
 /* Login */
 
 .login {
-  margin-left: 120px;
-  width: 80%;
-  min-height: 300px;
+  background-image: url(../imagem/inicio.jpg);
+  min-height: 407px;
 }
 
 .fundo{
@@ -297,6 +297,7 @@ color: white;
 /* Cadastro */
 
 .cadastro {
+  background-image: url(../imagem/inicio.jpg);
   min-height: 407px;
 }
 
@@ -316,7 +317,7 @@ color: white;
 .fundo3 h2{
   margin-bottom: 10px;
   text-align: center;
-  color: red;
+  color: black;
 
 }
 
@@ -328,7 +329,7 @@ color: white;
   } 
 
   .fundo4{
-    background-image: url(../imagem/cadastro.jpg);
+  background-image: url(../imagem/cadastro.jpg);
   background-size: cover;
   min-height: 200px;
   margin-top: 50px;
