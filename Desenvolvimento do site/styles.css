@@ -1,6 +1,6 @@
 /* Global */
 body {
-  background-color: #f6f3f3;
+    background-color: #595959;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -18,11 +18,7 @@ body {
     margin: auto;
     height: 0px;
   } 
-  .contorno{
-    margin-top: 5px;
-    border: 3px solid rgba(0, 0,0, 0.5);
-    border-radius: 15px;
-  }
+  
 
 /* fim GLOBAL */
 
@@ -114,7 +110,20 @@ body {
   color: black;  
 }
 
+.contorno_gestao{
+  background-color: #a1a1a1;
+  height: 360px;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 
+.contorno_beneficio{
+  background-color: #a1a1a1;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 /* Fim Gestão de Pessoas */
 
 /* Início da Cultura Organizacional */
@@ -142,6 +151,12 @@ body {
   color: black;  
 }
 
+.contorno_cultura{
+  background-color: #a1a1a1;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 /* Fim da Cultura Organizacional */
 
 /* Início Ética */
@@ -161,6 +176,12 @@ body {
   color: black;
 }
 
+.contorno_etica{
+  background-color: #a1a1a1;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 /* Fim Ética */
 
 /* Início Moral */
@@ -181,6 +202,12 @@ body {
   color: black;
 }
 
+.contorno_moral{
+  background-color: #a1a1a1;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 /* Fim Moral */
 
 /* Início Empátia */
@@ -201,6 +228,12 @@ body {
   color: black;
 }
 
+.contorno_empatia{
+  background-color: #a1a1a1;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 /* Fim Empátia */
 
 /* Início Desenvolvimento Interpessoal */
@@ -228,6 +261,12 @@ body {
   color: black; 
 }
 
+.contorno_desenvolvimento{
+  background-color: #a1a1a1;
+  margin-top: 5px;
+  border: 3px solid rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+}
 /* Fim Desenvolvimento Interpessoal */
 
 /* Footer */
@@ -235,14 +274,13 @@ body {
 footer {
  width: 100%;
  height: 100px;
- background-color: #daf0fd;
- color: black;
+ background-color: black;
  margin-bottom: 0px;
  padding: 100px 00px 20px 0px;
 }
           
 footer .container {
- color: black;
+ color: white;
  display: flex;
  flex-direction: column;
  justify-content: center;
