@@ -28,14 +28,16 @@
         <div class="container2">
          <div class="fundo">
             <h2>Login</h2>
-            <b>Email:</b> <input id="login" type="text" placeholder="ex: gdpessoas@gmail.com"><br><br>
-            <b>Senha:</b> <input id="senha" type="password" placeholder="ex: 12345678"><br><br>
+            <b>Email:</b> <input id="login" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com"><br><br>
+            <b>Senha:</b> <input id="senha" onkeyup="valida_senha()"type="password" placeholder="ex: 12345678"><br><br>
             <button onclick="entrar()">Entrar</button>
         </div>
         <div class="fundo2">
         </div>
         </div>
     </div>
+
+    <div id="div_msg"></div>
 </body> 
 </html>
 
@@ -43,6 +45,30 @@
 
     function entrar() {
 window.location.href= "pagina_inicial.html";        
+    }
+    
+    function valida_login(){
+        var login1 = login.value;
+        if(login1.includes('@') == true && login1.includes('.com') == true){
+            login.style = 'border-color:green';
+            msg.innerHTML = '<br> Email válido ;)';
+            
+        }else{
+            login.style = 'border-color:red'
+            msg.innerHTML = '<br> Digite um email válido!';
+        }
+    }
+
+    function valida_senha(){
+        var senha1 = senha.value;
+        if(senha1.length >= 8){
+            senha.style = 'border-color:green';
+            msg.innerHTML = '<br> Senha válida ;)';
+            
+        }else{
+            senha.style = 'border-color:red'
+            msg.innerHTML = '<br> Digite uma Senha válida!';
+        }
     }
     
 </script>

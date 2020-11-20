@@ -33,18 +33,56 @@
              <input id="sobrenome" type="text" placeholder="ex: Mascena"><br>
             <b>Data de Nacimento:</b>        
              <input id="datadenascimento" type="text" placeholder="ex: 20/02/2020"><br>
-            <b>Email de recuperação:</b>    
-              <input id="recuperacao" type="text" placeholder="ex: miranda@gmail.com"><br>
             <b>Email:</b>                  
-               <input id="login" type="text" placeholder="ex: gdpessoas@gmail.com"><br>
+               <input id="login" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com"><br>
             <b>Senha:</b>                   
-              <input id="senha" type="text" placeholder="ex: 12345678"><br>
+              <input id="senha"onkeyup="valida_senha()" type="text" placeholder="ex: 12345678"><br>
             <b>Confirme sua senha:</b>      
-              <input id="confirme" type="text" placeholder="ex: 12345678"><br>
+              <input id="confirme"onkeyup="valida_senha1()" type="text" placeholder="ex: 12345678"><br>
             <button onclick="concluir()">Concluir</button>
         </div>
         <div class="fundo4">
         </div>
     </div>
+
+    <div id="div_msg"></div>
 </body> 
 </html>
+
+<script>
+   function valida_login(){
+        var login1 = login.value;
+        if(login1.includes('@') == true && login1.includes('.com') == true){
+            login.style = 'border-color:green';
+            msg.innerHTML = '<br> Email válido ;)';
+            
+        }else{
+            login.style = 'border-color:red'
+            msg.innerHTML = '<br> Digite um email válido!';
+        }
+    }
+
+    function valida_senha(){
+        var senha1 = senha.value;
+        if(senha1.length >= 8){
+            senha.style = 'border-color:green';
+            msg.innerHTML = '<br> Senha válida ;)';
+            
+        }else{
+            senha.style = 'border-color:red'
+            msg.innerHTML = '<br> Digite uma Senha válida!';
+        }
+    }
+
+    function valida_senha1(){
+        var confirme1 = confirme.value;
+        if(confirme1.length >= 8){
+            confirme.style = 'border-color:green';
+            msg.innerHTML = '<br> Senha válida ;)';
+            
+        }else{
+            confirme.style = 'border-color:red'
+            msg.innerHTML = '<br> Digite uma Senha válida!';
+        }
+    }
+</script>
