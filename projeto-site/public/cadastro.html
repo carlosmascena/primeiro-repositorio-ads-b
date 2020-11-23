@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funcao.js"></script>
+</head> 
+<body>  
+     <!-- CABEÇALHO OU HEADER --> 
+     <div class="header">
+        <div class="container"></div>
+            <div class="title-header">
+               <h2> <span>GDP</span> <span>G</span>estão e <span>D</span>esenvolvimento de <span>P</span>essoas</h2>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Login</a></li>
+                    <span class="span2"><li><a href="cadastro.html">Cadastro</a></li></span>
+                </ul>
+            </div>
+        </div> 
+    </div>       
+
+ <!-- Cadastro -->
+    <div class="cadastro">
+        <div class="container2">
+            <div class="fundo3">
+            <h2>Cadastro</h2> 
+
+            <form  id="form_cadastro" method="post" onsubmit="concluir()">
+                <b>Nome:</b>                    
+                <input id="nome" type="text" placeholder="ex:Carlos" name="nome"><br>
+              <b>Sobrenome:</b>                
+               <input id="sobrenome" type="text" placeholder="ex: Mascena" name="sobrenome"><br>
+              <b>Email:</b>                  
+                 <input id="login" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com" name="login"><br>
+              <b>Senha:</b>                   
+                <input id="senha"onkeyup="valida_senha()" type="text" placeholder="ex: 12345678" name="senha"><br>
+              <b>Confirme a senha:</b>      
+                <input id="confirme"onkeyup="valida_senha1()" type="text" placeholder="ex: 12345678" name="confirme"><br>
+              <br>
+                <button type="submit">Concluir</button>
+            </form>
+            
+        </div>
+        <div class="fundo4">
+        </div>
+    </div>
+
+    <div id="div_msg"></div>
+</body> 
+</html>
+
+
+<script>
+
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='index.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+</script>
