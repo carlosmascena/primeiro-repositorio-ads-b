@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funcao.js"></script>
 </head> 
 <body>  
      <!-- CABEÇALHO OU HEADER --> 
@@ -27,19 +28,24 @@
         <div class="container2">
             <div class="fundo3">
             <h2>Cadastro</h2> 
-            <b>Nome:</b>                    
-              <input id="nome" type="text" placeholder="ex:Carlos"><br>
-            <b>Sobrenome:</b>                
-             <input id="sobrenome" type="text" placeholder="ex: Mascena"><br>
-            <b>Data de Nacimento:</b>        
-             <input id="datadenascimento" type="text" placeholder="ex: 20/02/2020"><br>
-            <b>Email:</b>                  
-               <input id="login" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com"><br>
-            <b>Senha:</b>                   
-              <input id="senha"onkeyup="valida_senha()" type="text" placeholder="ex: 12345678"><br>
-            <b>Confirme sua senha:</b>      
-              <input id="confirme"onkeyup="valida_senha1()" type="text" placeholder="ex: 12345678"><br>
-            <button onclick="concluir()">Concluir</button>
+
+            <form  id="form_cadastro" method="post" onsubmit="concluir()">
+                <b>Nome:</b>                    
+                <input id="nome" type="text" placeholder="ex:Carlos" name="nome"><br>
+              <b>Sobrenome:</b>                
+               <input id="sobrenome" type="text" placeholder="ex: Mascena" name="sobrenome"><br>
+              <b>Data de Nacimento:</b>        
+               <input id="datadenascimento" type="text" placeholder="ex: 20/02/2020" name="data"><br>
+              <b>Email:</b>                  
+                 <input id="login" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com" name="login"><br>
+              <b>Senha:</b>                   
+                <input id="senha"onkeyup="valida_senha()" type="text" placeholder="ex: 12345678" name="senha"><br>
+              <b>Confirme sua senha:</b>      
+                <input id="confirme"onkeyup="valida_senha1()" type="text" placeholder="ex: 12345678" name="confirme"><br>
+              <br>
+                <button type="submit">Concluir</button>
+            </form>
+            
         </div>
         <div class="fundo4">
         </div>
@@ -48,41 +54,3 @@
     <div id="div_msg"></div>
 </body> 
 </html>
-
-<script>
-   function valida_login(){
-        var login1 = login.value;
-        if(login1.includes('@') == true && login1.includes('.com') == true){
-            login.style = 'border-color:green';
-            msg.innerHTML = '<br> Email válido ;)';
-            
-        }else{
-            login.style = 'border-color:red'
-            msg.innerHTML = '<br> Digite um email válido!';
-        }
-    }
-
-    function valida_senha(){
-        var senha1 = senha.value;
-        if(senha1.length >= 8){
-            senha.style = 'border-color:green';
-            msg.innerHTML = '<br> Senha válida ;)';
-            
-        }else{
-            senha.style = 'border-color:red'
-            msg.innerHTML = '<br> Digite uma Senha válida!';
-        }
-    }
-
-    function valida_senha1(){
-        var confirme1 = confirme.value;
-        if(confirme1.length >= 8){
-            confirme.style = 'border-color:green';
-            msg.innerHTML = '<br> Senha válida ;)';
-            
-        }else{
-            confirme.style = 'border-color:red'
-            msg.innerHTML = '<br> Digite uma Senha válida!';
-        }
-    }
-</script>
