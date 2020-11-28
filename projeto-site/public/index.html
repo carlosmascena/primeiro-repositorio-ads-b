@@ -10,7 +10,7 @@
 <body> 
      <!-- CABEÇALHO OU HEADER --> 
      <div class="header"> 
-        <div class="container"></div>
+        <div class="container"></div> 
             <div class="title-header">
                <h2> <span>GDP</span> <span>G</span>estão e <span>D</span>esenvolvimento de <span>P</span>essoas</h2>
             </div>
@@ -30,7 +30,7 @@
          <div class="fundo">
             <h2>Login</h2>
 
-            <form id="form_login" method="post" onsubmit="entrar()">
+            <form id="form_login" method="post" onsubmit="return entrar()">
             <b>Email:</b> <input id="login" onkeyup="valida_login()"
              type="text" placeholder="ex: gdpessoas@gmail.com" name="login"><br><br>
             <b>Senha:</b> <input id="senha" onkeyup="valida_senha()"
@@ -49,9 +49,7 @@
 </html>
 
 <script>
-
     function entrar() {
-        aguardar();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -74,25 +72,10 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizar_aguardar(texto);
                 });
             }
         });
 
         return false;
     }
-
-    function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.visibility = 'visible';
-        div_erro.style.visibility = 'hidden';
-    }
-
-    function finalizar_aguardar(resposta) {
-        btn_entrar.disabled = false;
-        img_aguarde.style.visibility = 'hidden';
-        div_erro.style.visibility = 'visible';
-        div_erro.innerHTML = resposta;
-    }
-
 </script>

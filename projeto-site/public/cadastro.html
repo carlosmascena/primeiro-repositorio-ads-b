@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/funcao.js"></script>
+
 </head> 
-<body>  
+<body>   
      <!-- CABEÇALHO OU HEADER --> 
      <div class="header">
         <div class="container"></div>
@@ -27,19 +27,22 @@
     <div class="cadastro">
         <div class="container2">
             <div class="fundo3">
-            <h2>Cadastro</h2> 
+            <h2>Cadastro</h2>
 
-            <form  id="form_cadastro" method="post" onsubmit="concluir()">
+            <form id="form_cadastro" method="post" onsubmit="return cadastrar()" >
                 <b>Nome:</b>                    
-                <input id="nome" type="text" placeholder="ex:Carlos" name="nome"><br>
+                <input id="nome" type="text" placeholder="ex:Carlos" name="nome" required minlength="4"><br>
               <b>Sobrenome:</b>                
-               <input id="sobrenome" type="text" placeholder="ex: Mascena" name="sobrenome"><br>
-              <b>Email:</b>                  
-                 <input id="login" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com" name="login"><br>
+               <input id="sobrenome" type="text" placeholder="ex: Mascena" name="sobrenome" 
+               required minlength="4"><br> <b>Email:</b>                  
+                 <input id="email" onkeyup="valida_login()" type="text" placeholder="ex: gdpessoas@gmail.com" 
+                 name="email"><br>
               <b>Senha:</b>                   
-                <input id="senha"onkeyup="valida_senha()" type="text" placeholder="ex: 12345678" name="senha"><br>
+                <input id="senha"onkeyup="valida_senha()" type="password" placeholder="ex: 12345678" 
+                name="senha"><br>
               <b>Confirme a senha:</b>      
-                <input id="confirme"onkeyup="valida_senha1()" type="text" placeholder="ex: 12345678" name="confirme"><br>
+                <input id="confirme"onkeyup="valida_senha1()" type="password" placeholder="ex: 12345678" 
+                name="confirme"><br>
               <br>
                 <button type="submit">Concluir</button>
             </form>
@@ -49,15 +52,12 @@
         </div>
     </div>
 
-    <div id="div_msg"></div>
+    <div id="div_erro"></div>
 </body> 
 </html>
 
-
 <script>
-
     function cadastrar() {
-        aguardar();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -74,23 +74,9 @@
                 response.text().then(function (resposta) {
                     div_erro.innerHTML = resposta;
                 });
-                finalizar_aguardar();
             }
         });
 
         return false;
     }
-
-    function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
-    }
-
-    function finalizar_aguardar() {
-        btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
-    }
-
 </script>

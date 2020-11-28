@@ -1,4 +1,4 @@
-*Parte 1*
+npm i -gnode--*Parte 1*
 Editar o arquivo config/config.js e colocar as configurações de acesso ao seu banco de dados.
 Edite SOMENTE as configurações:
 username, password, database, host
