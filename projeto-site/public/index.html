@@ -16,6 +16,7 @@
             </div>
             <div class="nav">
                 <ul>
+                    <li><a href="sobre.html">Sobre</a></li>
                     <span class="span2"><li><a href="index.html">Login</a></li></span>
                     <li><a href="cadastro.html">Cadastro</a></li>
                 </ul>
@@ -31,10 +32,10 @@
             <h2>Login</h2>
 
             <form id="form_login" method="post" onsubmit="return entrar()">
-            <b>Email:</b> <input id="login" onkeyup="valida_login()"
+            <b>Email</b> <input id="login" onkeyup="valida_login()"
              type="email" required placeholder="ex: gdpessoas@gmail.com" name="login"><br><br>
-            <b>Senha:</b> <input id="senha" onkeyup="valida_senha()"
-            type="password" placeholder="ex: 12345678" name="senha"><br><br>
+            <b>Senha</b> <input id="senha" onkeyup="valida_senha()"
+            type="password" required minlength="8" as='number' placeholder="Senha númerica" name="senha"><br><br>
             <button type="submit">Entrar</button>
         </form>
 
