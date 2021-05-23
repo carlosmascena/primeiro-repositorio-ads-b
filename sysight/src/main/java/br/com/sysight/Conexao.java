@@ -9,11 +9,16 @@ public class Conexao {
 
 public Conexao() {
         this.datasource = new BasicDataSource();
-        datasource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        datasource.setUrl("jdbc:sqlserver://banco-de-dados-sysight.database.windows.net;" +
-                    "databaseName=Sysight;");
-        datasource.setUsername("Grupo5");
-        datasource.setPassword("Sysight5");
+        datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        //com.microsoft.sqlserver.jdbc.SQLServerDriver
+        datasource.setUrl("jdbc:mysql://localhost:3306/banco1" +
+                //jdbc:sqlserver://banco-de-dados-sysight.database.windows.net;
+                    "");
+        //databaseName=Sysight;
+        datasource.setUsername("banco1");
+        //Grupo5
+        datasource.setPassword("urubu100");
+        //Sysight5
 
     }
  
