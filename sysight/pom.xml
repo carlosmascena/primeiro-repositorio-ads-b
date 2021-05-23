@@ -23,7 +23,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.sysight.Tela</mainClass>
+                            <mainClass>br.com.sysight.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
