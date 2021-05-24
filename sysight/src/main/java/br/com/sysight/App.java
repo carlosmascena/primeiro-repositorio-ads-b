@@ -13,6 +13,8 @@ public class App {
        //Slack.enviarMensagem(json);
         
         Conexao con = new Conexao();
+        Conexao2 con2 = new Conexao2();
+        
         JdbcTemplate config = new JdbcTemplate(con.getDatasource());
 
         Recurso recurso = new Recurso();
