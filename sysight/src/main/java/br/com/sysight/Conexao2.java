@@ -29,4 +29,8 @@ public class Conexao2 {
         //
 
     }
+    
+     public BasicDataSource getDatasource() {
+  return datasource;
+ }
 }
