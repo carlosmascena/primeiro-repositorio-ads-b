@@ -11,8 +11,8 @@ public Conexao() {
         this.datasource = new BasicDataSource();
         datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         //com.microsoft.sqlserver.jdbc.SQLServerDriver
-        datasource.setUrl("jdbc:mysql://172.17.0.2:3306/banco1" +
-                //ip do container
+        datasource.setUrl("jdbc:mysql://localhost:3306/banco1" +
+                //ip do container 172.17.0.2 no lugar de localhost
                 //jdbc:sqlserver://banco-de-dados-sysight.database.windows.net;
                     "");
         //databaseName=Sysight;
