@@ -16,7 +16,8 @@ public class App {
         Conexao2 con2 = new Conexao2();
         
         JdbcTemplate config = new JdbcTemplate(con.getDatasource());
-
+        JdbcTemplate config2 = new JdbcTemplate(con.getDatasource());
+        
         Recurso recurso = new Recurso();
 
         // Parametros para o primeiro insert
@@ -47,7 +48,8 @@ public class App {
                 // Podemos utilizar variavéis como o exemplo abaixo:
                 //ALTERE A FK DE ACORDO COM SEU EQUIPAMENTO
                 config.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
-
+                config2.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
+                
         System.out.println("Dados de recursos inseridos na Azure! :D");
         System.out.println("Dados de recursos inseridos no Mysql! :D");
      }
