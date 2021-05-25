@@ -3,7 +3,7 @@ package br.com.sysight;
 import java.io.IOException;
 import java.net.UnknownHostException;
 import org.json.JSONObject;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate; 
 
 public class App {
      public static void main(String args[]) throws UnknownHostException, IOException, InterruptedException {
@@ -16,7 +16,7 @@ public class App {
         Conexao2 con2 = new Conexao2();
         
         JdbcTemplate config = new JdbcTemplate(con.getDatasource());
-        JdbcTemplate config2 = new JdbcTemplate(con.getDatasource());
+        JdbcTemplate config2 = new JdbcTemplate(con2.getDatasource());
         
         Recurso recurso = new Recurso();
 
@@ -28,18 +28,18 @@ public class App {
         String consumoDisco = String.format("%.2f", recurso.getConsumoDisco());
        
       
-        json.put("text", String.format("Olá! Aqui é a Sys, bot da Sysight! "
-                + "Estou aqui para mostrar algumas informações sobre seu sistema. "
-                + "Vamos lá:\n"
-                + "Data e Horario: %s\n"
-                + "Memoria RAM: %s%%\n"
-                + "Processador: %s%%\n"
-                + "Discos: %s%%\n",
-                momento,
-                consumoRam,
-                consumoCpu,
-                consumoDisco)); 
-        Slack.enviarMensagem(json);
+        //json.put("text", String.format("Olá! Aqui é a Sys, bot da Sysight! "
+                //+ "Estou aqui para mostrar algumas informações sobre seu sistema. "
+                //+ "Vamos lá:\n"
+                //+ "Data e Horario: %s\n"
+                //+ "Memoria RAM: %s%%\n"
+                //+ "Processador: %s%%\n"
+               // + "Discos: %s%%\n",
+               // momento,
+             //   consumoRam,
+           //     consumoCpu,
+         //       consumoDisco)); 
+       // Slack.enviarMensagem(json);
         
         // Texto padrão para insert
         String insertStatement = "INSERT INTO Recurso (fkEquipamento, consumoRam, consumoCpu, consumoDisco, momento) VALUES (?, ?, ?, ?, ?)";
