@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 public class App {
      public static void main(String args[]) throws UnknownHostException, IOException, InterruptedException {
-       JSONObject json = new JSONObject();
+     //  JSONObject json = new JSONObject();
        
        //json.put("text", "Olá! Eu sou a Sys! A bot da Sysight!");
        //Slack.enviarMensagem(json);
@@ -49,8 +49,8 @@ public class App {
                 //ALTERE A FK DE ACORDO COM SEU EQUIPAMENTO
                 config.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
                 config2.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
-                
+       
+        System.out.println("Dados de recursos inseridos no Mysql! :D");    
         System.out.println("Dados de recursos inseridos na Azure! :D");
-        System.out.println("Dados de recursos inseridos no Mysql! :D");
      }
 }

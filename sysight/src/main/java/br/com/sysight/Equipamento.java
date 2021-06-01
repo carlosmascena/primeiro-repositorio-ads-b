@@ -30,9 +30,6 @@ public class Equipamento {
         this.hostName = InetAddress.getLocalHost().getHostName();
                   
     }
-
-    
-
     
     public String getHostName() {
         return hostName;
@@ -62,10 +59,4 @@ public class Equipamento {
         return discos;
     }
     
-    
-
-    
-
- 
-
 }

@@ -20,14 +20,9 @@ public class Conexao2 {
         datasource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         //
         datasource.setUrl("jdbc:sqlserver://sistem.database.windows.net;" +
-                //
                     "databaseName=sistem;");
-        //
         datasource.setUsername("sistem");
-        //
         datasource.setPassword("#Gf51641290862");
-        //
-
     }
     
      public BasicDataSource getDatasource() {

@@ -2,7 +2,6 @@ package br.com.sysight;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-
 public class Conexao {
 
  private BasicDataSource datasource;  
@@ -20,8 +19,6 @@ public Conexao() {
         datasource.setPassword("urubu100");
         //Sysight5
     }
-
- 
 
  public BasicDataSource getDatasource() {
   return datasource;

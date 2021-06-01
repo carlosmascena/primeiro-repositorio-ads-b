@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
-
 public class Recurso {
 
     Looca looca = new Looca();
@@ -36,16 +35,12 @@ public class Recurso {
         return dtf.format(now);
     }
 
- 
-
     public Double getConsumoRam() {
         Long ramTotal = looca.getMemoria().getTotal();
         Long ramDisponivel = looca.getMemoria().getDisponivel();
         Double percentualMemoriaEmUso = (double) (ramTotal - ramDisponivel) / ramTotal * 100;
         return percentualMemoriaEmUso;
     }
-
- 
 
     public Double getConsumoDisco() {
         Long discoTotal = looca.getGrupoDeDiscos().getTamanhoTotal();
