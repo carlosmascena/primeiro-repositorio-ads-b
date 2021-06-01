@@ -23,7 +23,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.sysight.App</mainClass>
+                            <mainClass>br.com.sistema.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

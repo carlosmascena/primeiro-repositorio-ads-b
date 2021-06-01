@@ -9,15 +9,9 @@ public class Conexao {
 public Conexao() {
         this.datasource = new BasicDataSource();
         datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        //com.microsoft.sqlserver.jdbc.SQLServerDriver
-        datasource.setUrl("jdbc:mysql://localhost:3306/banco1" +
-                //jdbc:sqlserver://banco-de-dados-sysight.database.windows.net;
-                    "");
-        //databaseName=Sysight;
+        datasource.setUrl("jdbc:mysql://localhost:3306/banco1");
         datasource.setUsername("root");
-        //Grupo5
         datasource.setPassword("urubu100");
-        //Sysight5
     } 
 
  public BasicDataSource getDatasource() {
