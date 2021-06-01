@@ -19,13 +19,13 @@ public class Conexao2 {
         this.datasource = new BasicDataSource();
         datasource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         //
-        datasource.setUrl("jdbc:sqlserver://banco-de-dados-sysight.database.windows.net;" +
+        datasource.setUrl("jdbc:sqlserver://sistem.database.windows.net;" +
                 //
-                    "databaseName=Sysight;");
+                    "databaseName=sistem;");
         //
-        datasource.setUsername("Grupo5");
+        datasource.setUsername("sistem");
         //
-        datasource.setPassword("Sysight5");
+        datasource.setPassword("#Gf51641290862");
         //
 
     }
