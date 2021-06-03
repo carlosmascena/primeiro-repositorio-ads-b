@@ -47,7 +47,7 @@ public class App {
                 // Utilizamos o comando "update" para inserir e/ou atualizar registros.
                 // Podemos utilizar variavéis como o exemplo abaixo:
                 //ALTERE A FK DE ACORDO COM SEU EQUIPAMENTO
-              //  config.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
+                config.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
                 config2.update(insertStatement, 2,consumoRam, consumoCpu, consumoDisco, momento);
            
         System.out.println("Dados de recursos inseridos no Mysql! :D");
